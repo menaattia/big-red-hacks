@@ -1,11 +1,8 @@
 import React, {useRef} from 'react';
 import { Box,
   Button, 
-  Card, 
-  CardHeader, 
   Container, 
   Grid, 
-  Link, 
   List, 
   ListItem, 
   ListItemIcon, 
@@ -14,7 +11,7 @@ import HomeImg from '../components/HomeImg';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import { routes } from '../App';
-import { Link as RouterLink } from 'react-router-dom';
+// import { Link as RouterLink } from 'react-router-dom';
 import InsightsIcon from '@mui/icons-material/Insights';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import PeopleIcon from '@mui/icons-material/People';
@@ -34,15 +31,6 @@ const styles = {
   },
 };
 
-const CardButton = ({title, subtitle, link, color}: Props) => {
-    return <Link sx={{textDecoration: "none"}} component={RouterLink} 
-    to={link} > <Card sx={{margin: "1em", backgroundColor: `${color}`, padding: '1.5em 1em'}}>
-      <CardHeader title={title}
-        subheader={subtitle} 
-        />
-      </Card>
-      </ Link>
- }
 
 export default function Home() {
   const { jumboText } = styles;
