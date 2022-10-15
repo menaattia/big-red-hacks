@@ -2,6 +2,7 @@ import * as React from 'react';
 import { CssBaseline, Box, Container, Grid } from '@mui/material';
 import Profile from '../components/Profile';
 import Tabs from '../components/Tabs'
+import Graph from '../components/Graph';
 
 const HomePage = () => {
   return (
@@ -20,6 +21,7 @@ const HomePage = () => {
         }}
         />
         <Tabs></Tabs>
+        <Graph></Graph>
       </Container>
     </React.Fragment>
   );
