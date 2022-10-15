@@ -1,0 +1,27 @@
+.image {
+  width: 70%;
+  height: 70%;
+  background-image: url("../assets/homeimg.jpeg");
+  background-size: 150%;
+  z-index: 4;
+  position: absolute;
+  border-radius: 50%;
+  opacity: 80%;
+}
+
+.square {
+  position: relative;
+  width: 100%;
+}
+
+.square:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+@media (max-width: 600px) {
+  .square {
+    width: 80%;
+  }
+}
