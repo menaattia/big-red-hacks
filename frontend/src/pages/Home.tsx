@@ -3,7 +3,9 @@ import { CssBaseline, Box, Container, Grid } from '@mui/material';
 import Profile from '../components/Profile';
 import Tabs from '../components/Tabs';
 import Graph from '../components/Graph';
-import Data from '../Data'
+import Data from '../Data';
+import NavBar from '../components/NavBar';
+import { routes } from '../App';
 
 const HomePage = () => {
     const [tab, setTab] = useState<string>("recycling");
@@ -26,6 +28,7 @@ const HomePage = () => {
 
     return (
         <React.Fragment>
+        <NavBar headersData={routes} shadow={true} position="fixed"/>
         <CssBaseline />
         <Grid >
           <Grid item>
