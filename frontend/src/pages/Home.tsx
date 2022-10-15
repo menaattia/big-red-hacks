@@ -1,13 +1,17 @@
 import * as React from 'react';
-import CssBaseline from '@mui/material/CssBaseline';
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
+import { CssBaseline, Box, Container, Grid } from '@mui/material';
+import Profile from '../components/Profile';
 import Tabs from '../components/Tabs'
 
 const HomePage = () => {
   return (
     <React.Fragment>
       <CssBaseline />
+      <Grid >
+        <Grid item>
+          <Profile username="user" first="Test" last="User"/>
+        </Grid>
+      </Grid>
       <Container fixed>
         <Box
         sx={{
