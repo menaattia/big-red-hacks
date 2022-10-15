@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { CssBaseline, Box, Container, Grid } from '@mui/material';
+import { CssBaseline, Box, Container, Grid, Typography } from '@mui/material';
 import Profile from '../components/Profile';
 import Tabs from '../components/Tabs';
 import Graph from '../components/Graph';
 import Data from '../Data';
 import NavBar from '../components/NavBar';
+import ImageGrid from '../components/ImageGrid';
 import { routes } from '../App';
 
 const HomePage = () => {
@@ -27,19 +28,23 @@ const HomePage = () => {
     }
 
     return (
-        <React.Fragment>
+        <div style={{paddingTop: "12vh"}}>
         <NavBar headersData={routes} shadow={true} position="fixed"/>
         <CssBaseline />
-        <Grid >
-          <Grid item>
+        <Grid container>
+          <Grid item xs={12} md={6}>
             <Profile username="user" first="Test" last="User"/>
           </Grid>
-        </Grid>
-        <Container fixed>
+          <Grid item xs={12} md={5}>
+            <ImageGrid />
+          </Grid>
+          <Container fixed>
+            <Typography variant="h5">Summary:</Typography>
             <Tabs handleTab={handleTab}></Tabs>
             <Graph data={getData()}></Graph>
         </Container>
-        </React.Fragment>
+        </Grid>
+        </div>
     );
 }
 
