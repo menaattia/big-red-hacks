@@ -53,7 +53,7 @@ const styles = {
     paddingBottom: '0.75em',
     margin: '0 0 1vh 0',
     paddingTop: '20px',
-    height: '12vh'
+    height: '9vh'
   },
   logo: {
     fontWeight: 600,

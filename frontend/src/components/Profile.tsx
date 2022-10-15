@@ -59,7 +59,11 @@ const Profile = ({username, first, last}: Props) => {
   <Container sx={{margin: "7%"}}>
     <Grid container>
       <Grid item xs={4}>
-      <Avatar {...stringAvatar(`${first} ${last}`)} >{username[0].toUpperCase()}</Avatar>
+      <Avatar 
+      {...stringAvatar(`${first} ${last}`)} 
+      sx={{ width: 100, height: 100 }} >
+        {username[0].toUpperCase()}
+      </Avatar>
       </Grid>
       <Grid item xs={8}>
         <Typography>{`${first} ${last}`}</Typography>
