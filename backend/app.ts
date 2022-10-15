@@ -11,7 +11,7 @@ app.use(cors({ origin: "*" }));
 app.use(morgan("combined"));
 
 // Have Node serve the files for our built React app
-// app.use(express.static(path.resolve(__dirname, "../frontend/build")));
+app.use(express.static(path.resolve(__dirname, "../frontend/build")));
 
 app.get("/", async (req, res) => {
   try {

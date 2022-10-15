@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import { Avatar,Button, Grid, Container, Typography } from '@mui/material';
 
 type Props = {
@@ -36,6 +37,22 @@ function stringAvatar(name: string) {
   };
 }
 
+function uploadFile(e: React.FormEvent<HTMLInputElement>) {
+  e.preventDefault()
+   const result = (e.target as HTMLInputElement).files
+   const result1 = result !== null? result[0].name : ""
+   console.log(result1)
+   axios.post('/', {
+    src: result1
+  })
+  .then(function (response) {
+    console.log(response.data);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+}
+
 
 const Profile = ({username, first, last}: Props) => {
   return <>
@@ -66,6 +83,7 @@ const Profile = ({username, first, last}: Props) => {
                 type="file"
                 accept="image/png, image/gif, image/jpeg, image/jpg"
                 hidden
+                onChange={uploadFile}
               />
           </Button> 
           </Grid>
