@@ -3,11 +3,17 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 
-const ScrollableTabsButtonAuto = () => {
+type TabsProps = {
+    handleTab: (tabValue:string) => void
+}
+
+const ScrollableTabsButtonAuto = (props:TabsProps) => {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    setValue(newValue);
+      const text = event.currentTarget.textContent;
+      if (text != null) props.handleTab(text);
+      setValue(newValue);
   };
 
   return (
@@ -19,9 +25,10 @@ const ScrollableTabsButtonAuto = () => {
         scrollButtons="auto"
         aria-label="scrollable auto tabs example"
       >
-        <Tab label="Recycling" />
-        <Tab label="Biking" />
-        <Tab label="Item Three" />
+        <Tab label="recycling" />
+        <Tab label="zero-waste" />
+        <Tab label="biking" />
+        <Tab label="walking" />
       </Tabs>
     </Box>
   );
