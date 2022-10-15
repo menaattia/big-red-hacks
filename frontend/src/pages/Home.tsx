@@ -1,9 +1,7 @@
-import * as React from 'react';
-import {useState} from 'react';
-import CssBaseline from '@mui/material/CssBaseline';
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
-import Tabs from '../components/Tabs'
+import React, { useState } from 'react';
+import { CssBaseline, Box, Container, Grid } from '@mui/material';
+import Profile from '../components/Profile';
+import Tabs from '../components/Tabs';
 import Graph from '../components/Graph';
 import Data from '../Data'
 
@@ -29,13 +27,12 @@ const HomePage = () => {
     return (
         <React.Fragment>
         <CssBaseline />
+        <Grid >
+          <Grid item>
+            <Profile username="user" first="Test" last="User"/>
+          </Grid>
+        </Grid>
         <Container fixed>
-            <Box
-            sx={{
-                width: 500,
-                height: 250
-            }}
-            />
             <Tabs handleTab={handleTab}></Tabs>
             <Graph data={getData()}></Graph>
         </Container>
