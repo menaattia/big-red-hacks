@@ -39,7 +39,6 @@ const HomePage = () => {
             <ImageGrid />
           </Grid>
           <Container fixed>
-            <Typography variant="h5">Summary:</Typography>
             <Tabs handleTab={handleTab}></Tabs>
             <Graph data={getData()}></Graph>
         </Container>
