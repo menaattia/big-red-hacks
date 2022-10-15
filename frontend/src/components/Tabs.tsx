@@ -3,7 +3,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 
-export default function ScrollableTabsButtonAuto() {
+const ScrollableTabsButtonAuto = () => {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
@@ -26,3 +26,5 @@ export default function ScrollableTabsButtonAuto() {
     </Box>
   );
 }
+
+export default ScrollableTabsButtonAuto;
