@@ -2,7 +2,7 @@
   width: 70%;
   height: 70%;
   background-image: url("../assets/homeimg.jpeg");
-  background-size: 150%;
+  background-size: 110%;
   z-index: 4;
   position: absolute;
   border-radius: 50%;
@@ -20,8 +20,15 @@
   padding-bottom: 100%;
 }
 
+.home {
+  padding-top: 15vh;
+}
+
 @media (max-width: 600px) {
   .square {
     width: 80%;
+  }
+  .home {
+    padding-top: 0;
   }
 }

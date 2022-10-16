@@ -15,6 +15,7 @@ import { routes } from '../App';
 import InsightsIcon from '@mui/icons-material/Insights';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import PeopleIcon from '@mui/icons-material/People';
+import './HomePage.css';
 
 
 export default function Home() {
@@ -24,8 +25,8 @@ export default function Home() {
 
   return <>
         
-          <section style={{minHeight: "82vh", padding: "0 0 18vh", overflow: "auto"}}>
-          <NavBar headersData={routes} shadow={false} position="static"/>
+          <section style={{minHeight: "82vh", padding: "7vh 2vw 7vh 0", overflow: "auto"}}>
+          <NavBar headersData={routes} shadow={false} position="fixed"/>
           <Container>
               <Grid container sx={{position: "relative"}}>
                 <Grid item xs={12} sm={6}>
