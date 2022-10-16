@@ -32,6 +32,10 @@ function stringAvatar(name: string) {
   return {
     sx: {
       bgcolor: stringToColor(name),
+      width: "100px",
+      height: "100px",
+      float: "right",
+      margin: "15%"
     },
     children: `${name.split(' ')[0][0]}${name.split(' ')[1][0]}`,
   };
@@ -59,28 +63,29 @@ const Profile = ({username, first, last}: Props) => {
   <Container sx={{margin: "7%"}}>
     <Grid container>
       <Grid item xs={4}>
-      <Avatar 
-      {...stringAvatar(`${first} ${last}`)} 
-      sx={{ width: 100, height: 100 }} >
-        {username[0].toUpperCase()}
-      </Avatar>
+      <Avatar {...stringAvatar(`${first} ${last}`)} ></Avatar>
       </Grid>
       <Grid item xs={8}>
-        <Typography>{`${first} ${last}`}</Typography>
-        <Typography>{`@${username}`}</Typography>
+          <Typography sx={{fontWeight: "bold", fontSize: "20px"}}>{`${first} ${last}`}</Typography>
+          <Typography sx={{paddingBottom: "10px"}}>{`@${username}`}</Typography>
         <Grid container>
-          <Grid item xs={6}>
-            <Typography>Followers</Typography>
-            <Typography>46</Typography>
+          <Grid item xs={4}>
+            <Typography sx={{textAlign: "center"}}>Followers</Typography>
+            <Typography sx={{textAlign: "center"}}>46</Typography>
           </Grid>
-          <Grid item xs={6}>
-            <Typography>Following</Typography>
-            <Typography>30</Typography>
+          <Grid item xs={4}>
+            <Typography sx={{textAlign: "center"}}>Following</Typography>
+            <Typography sx={{textAlign: "center"}}>30</Typography>
+          </Grid>
+          <Grid item xs={4}>
+            <Typography sx={{textAlign: "center"}}>Posts</Typography>
+            <Typography sx={{textAlign: "center"}}>9</Typography>
           </Grid>
           <Grid item>
           <Button
               variant="contained"
               component="label"
+              sx={{marginTop: "20px", backgroundColor: "green"}}
             >
               Upload Image
               <input
