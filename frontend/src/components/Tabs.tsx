@@ -1,7 +1,8 @@
 import * as React from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import Box from '@mui/material/Box';
+import { CssBaseline, Box, Container, Grid, Typography } from '@mui/material';
+
 
 type TabsProps = {
     handleTab: (tabValue:string) => void
@@ -18,6 +19,7 @@ const ScrollableTabsButtonAuto = (props:TabsProps) => {
 
   return (
     <Box sx={{ maxWidth: { xs: 320, sm: 480 }, bgcolor: 'background.paper' }}>
+      <Typography variant="h6">SUMMARY</Typography>
       <Tabs
         value={value}
         onChange={handleChange}
