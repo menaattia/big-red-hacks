@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CssBaseline, Box, Container, Grid, Typography } from '@mui/material';
+import { CssBaseline, Container, Grid, Typography } from '@mui/material';
 import Profile from '../components/Profile';
 import Tabs from '../components/Tabs';
 import Graph from '../components/Graph';

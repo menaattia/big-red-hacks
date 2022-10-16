@@ -16,24 +16,8 @@ import InsightsIcon from '@mui/icons-material/Insights';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import PeopleIcon from '@mui/icons-material/People';
 
-type Props = {
-  title: string,
-  subtitle: string,
-  link: string,
-  color: string
-}
-
-const styles = {
-  jumboText: {
-    fontWeight: 600,
-    margin: '0.5em 0 0.5em 0',
-    opacity: "75%"
-  },
-};
-
 
 export default function Home() {
-  const { jumboText } = styles;
   const sectionRef = useRef(document.createElement('div'));
   
   const executeScroll = () => sectionRef.current.scrollIntoView()    
@@ -68,28 +52,28 @@ export default function Home() {
               </Grid>
             </Container>
           </section>
-          <section ref={sectionRef} style={{backgroundColor: "#547b63", minHeight: "82vh", padding: "8vh 0"}}>
+          <section ref={sectionRef} style={{backgroundColor: "#547b63", minHeight: "82vh", padding: "6vh 0"}}>
           <Container maxWidth="md" sx={{ 
               paddingTop: "2em",
             }}>
             <Grid container sx={{color: "rgb(25, 29, 63)"}}>
-              <Grid item sm={5}>
+              <Grid item sm={7}>
               <List sx={{textAlign: "left"}}>
                 <ListItemIcon >
                   <InsightsIcon sx={{paddingLeft: "0.5em", fontSize: "50px", color: "white"}}/>
                 </ListItemIcon>
                 <ListItem sx={{color: "white"}}>
-                  <Typography>Keep track of your weekly progress on activities that are more sustainable for the environment</Typography>
+                  <Typography sx={{fontSize: "26px"}}>Keep track of your weekly progress on activities that are more sustainable for the environment</Typography>
                 </ListItem>
               </List>
               </Grid>
-              <Grid item sm={7}>
+              <Grid item sm={5}>
 
               </Grid>
-              <Grid item sm={7}>
+              <Grid item sm={5}>
                 
               </Grid>
-              <Grid item sm={5}>
+              <Grid item sm={7}>
               <List sx={{textAlign: "left"}}>
                 <div className="home2">
                   <ListItemIcon>
@@ -97,21 +81,21 @@ export default function Home() {
                   </ListItemIcon>
                 </div>
                 <ListItem sx={{color: "white"}}>
-                  <Typography>Take part in challenges and win cash prizes</Typography>
+                  <Typography sx={{fontSize: "26px"}}>Take part in challenges and win cash prizes</Typography>
                 </ListItem>
               </List>
               </Grid>
-              <Grid item sm={5}>
+              <Grid item sm={7}>
                 <List sx={{textAlign: "left"}}>
                   <ListItemIcon>
                     <PeopleIcon sx={{paddingLeft: "0.5em", fontSize: "50px", color: "white"}}/>
                   </ListItemIcon>
                   <ListItem sx={{color: "white"}}>
-                    <Typography>Find a community to support your efforts and motivate you to do better</Typography>
+                    <Typography sx={{fontSize: "26px"}}>Find a community to support your efforts and motivate you to do better</Typography>
                   </ListItem>
               </List>
               </Grid>
-              <Grid item sm={7}>
+              <Grid item sm={5}>
                 
               </Grid>
             </Grid>

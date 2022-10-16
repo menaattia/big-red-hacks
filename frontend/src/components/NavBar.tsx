@@ -14,9 +14,7 @@ import {
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link as RouterLink } from 'react-router-dom';
-import LanguageIcon from '@mui/icons-material/Language';
 import LeafIcon from '@mui/icons-material/EnergySavingsLeaf';
-import LogoIcon from '../assets/logo.png';
 import { useLocation } from 'react-router-dom';
 import './NavBar.css';
 
@@ -155,7 +153,7 @@ const NavBar = ({ headersData, position, shadow }: Props): ReactElement => {
         <Typography sx={{...logo}}>
           <Link sx={{color: '#547b63'}} color="textPrimary" underline="none" href="/">
             <LeafIcon/>
-            Sustainable Life
+            EcoMore
           </Link>
         </Typography>
       </Grid>
